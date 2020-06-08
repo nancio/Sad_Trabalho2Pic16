@@ -1,0 +1,1716 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"25 main.c
+[; ;main.c: 25: {
+[; ;main.c: 25: void PWM_Duty(unsigned int duty)
+[s S96 `i 1 `i 1 `i 1 `i 1 ]
+[n S96 . temperatura huminade velocidade alarm ]
+"1816 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1816: extern volatile unsigned char PR2 __attribute__((address(0x092)));
+[v _PR2 `Vuc ~T0 @X0 0 e@146 ]
+"2449
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2449: extern volatile __bit CCP1M3 __attribute__((address(0xBB)));
+[v _CCP1M3 `Vb ~T0 @X0 0 e@187 ]
+"2446
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2446: extern volatile __bit CCP1M2 __attribute__((address(0xBA)));
+[v _CCP1M2 `Vb ~T0 @X0 0 e@186 ]
+"2872
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2872: extern volatile __bit T2CKPS0 __attribute__((address(0x90)));
+[v _T2CKPS0 `Vb ~T0 @X0 0 e@144 ]
+"2875
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2875: extern volatile __bit T2CKPS1 __attribute__((address(0x91)));
+[v _T2CKPS1 `Vb ~T0 @X0 0 e@145 ]
+"2902
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2902: extern volatile __bit TMR2ON __attribute__((address(0x92)));
+[v _TMR2ON `Vb ~T0 @X0 0 e@146 ]
+"2965
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2965: extern volatile __bit TRISC2 __attribute__((address(0x43A)));
+[v _TRISC2 `Vb ~T0 @X0 0 e@1082 ]
+"2452
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2452: extern volatile __bit CCP1X __attribute__((address(0xBD)));
+[v _CCP1X `Vb ~T0 @X0 0 e@189 ]
+"2455
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2455: extern volatile __bit CCP1Y __attribute__((address(0xBC)));
+[v _CCP1Y `Vb ~T0 @X0 0 e@188 ]
+"892
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 892: extern volatile unsigned char CCPR1L __attribute__((address(0x015)));
+[v _CCPR1L `Vuc ~T0 @X0 0 e@21 ]
+"6 ./ADC.h
+[; ;./ADC.h: 6: unsigned int ADC_Read(unsigned char channel);
+[v _ADC_Read `(ui ~T0 @X0 0 ef1`uc ]
+"194 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\stdio.h
+[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
+"10 ./UART.h
+[; ;./UART.h: 10: void UART_Write_Text(char *text);
+[v _UART_Write_Text `(v ~T0 @X0 0 ef1`*uc ]
+"33 main.c
+[; ;main.c: 33: {
+[; ;main.c: 33:   }
+[s S97 `i 1 `i 1 `i 1 ]
+[n S97 . rajada_vento humidade_incendio temperatuta_incendio ]
+"16 ./UART.h
+[; ;./UART.h: 16: void UART_Read_Text(char *Output, unsigned int length);
+[v _UART_Read_Text `(v ~T0 @X0 0 ef2`*uc`ui ]
+"18
+[; ;./UART.h: 18: void UART_Write_Decimal(int Dec);
+[v _UART_Write_Decimal `(v ~T0 @X0 0 ef1`i ]
+[t ~ __interrupt . k ]
+[t T1 __interrupt ]
+"2881 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2881: extern volatile __bit TMR0IF __attribute__((address(0x5A)));
+[v _TMR0IF `Vb ~T0 @X0 0 e@90 ]
+"59
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 59: extern volatile unsigned char TMR0 __attribute__((address(0x001)));
+[v _TMR0 `Vuc ~T0 @X0 0 e@1 ]
+"2851
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2851: extern volatile __bit T0IF __attribute__((address(0x5A)));
+[v _T0IF `Vb ~T0 @X0 0 e@90 ]
+"641
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 641: extern volatile unsigned char TMR1L __attribute__((address(0x00E)));
+[v _TMR1L `Vuc ~T0 @X0 0 e@14 ]
+"2605
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2605: extern volatile __bit INTF __attribute__((address(0x59)));
+[v _INTF `Vb ~T0 @X0 0 e@89 ]
+"216
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 216: extern volatile unsigned char PORTB __attribute__((address(0x006)));
+[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
+"346
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 346:     struct {
+[s S12 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S12 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
+"345
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 345: typedef union {
+[u S11 `S12 1 ]
+[n S11 . . ]
+"357
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 357: extern volatile PORTDbits_t PORTDbits __attribute__((address(0x008)));
+[v _PORTDbits `VS11 ~T0 @X0 0 e@8 ]
+[v F842 `(v ~T0 @X0 1 tf1`ul ]
+"92 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic.h
+[v __delay `JF842 ~T0 @X0 0 e ]
+[p i __delay ]
+"56 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\string.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\string.h: 56: extern size_t strlen(const char *);
+[v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
+"8 ./I2C.h
+[; ;./I2C.h: 8: void I2C_Begin();
+[v _I2C_Begin `(v ~T0 @X0 0 e? ]
+"12
+[; ;./I2C.h: 12: void I2C_Write(unsigned data);
+[v _I2C_Write `(v ~T0 @X0 0 ef1`ui ]
+"10
+[; ;./I2C.h: 10: void I2C_End();
+[v _I2C_End `(v ~T0 @X0 0 e? ]
+"14
+[; ;./I2C.h: 14: unsigned short I2C_Read(unsigned short ack);
+[v _I2C_Read `(us ~T0 @X0 0 ef1`us ]
+"284 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 284:     struct {
+[s S10 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S10 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
+"283
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 283: typedef union {
+[u S9 `S10 1 ]
+[n S9 . . ]
+"295
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 295: extern volatile PORTCbits_t PORTCbits __attribute__((address(0x007)));
+[v _PORTCbits `VS9 ~T0 @X0 0 e@7 ]
+"222
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 222:     struct {
+[s S8 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S8 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"221
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 221: typedef union {
+[u S7 `S8 1 ]
+[n S7 . . ]
+"233
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 233: extern volatile PORTBbits_t PORTBbits __attribute__((address(0x006)));
+[v _PORTBbits `VS7 ~T0 @X0 0 e@6 ]
+[p mainexit ]
+"4 ./UART.h
+[; ;./UART.h: 4: char UART_Init(const long int baudrate);
+[v _UART_Init `(uc ~T0 @X0 0 ef1`Cl ]
+"4 ./I2C.h
+[; ;./I2C.h: 4: void I2C_init(const unsigned long feq_K);
+[v _I2C_init `(v ~T0 @X0 0 ef1`Cul ]
+"4 ./ADC.h
+[; ;./ADC.h: 4: void ADC_Init();
+[v _ADC_Init `(v ~T0 @X0 0 e? ]
+"2569 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2569: extern volatile __bit GIE __attribute__((address(0x5F)));
+[v _GIE `Vb ~T0 @X0 0 e@95 ]
+"2629
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2629: extern volatile __bit PEIE __attribute__((address(0x5E)));
+[v _PEIE `Vb ~T0 @X0 0 e@94 ]
+"2599
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2599: extern volatile __bit INTE __attribute__((address(0x5C)));
+[v _INTE `Vb ~T0 @X0 0 e@92 ]
+"906
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 906: extern volatile unsigned char CCP1CON __attribute__((address(0x017)));
+[v _CCP1CON `Vuc ~T0 @X0 0 e@23 ]
+"655
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 655: extern volatile unsigned char T1CON __attribute__((address(0x010)));
+[v _T1CON `Vuc ~T0 @X0 0 e@16 ]
+"2884
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2884: extern volatile __bit TMR1CS __attribute__((address(0x81)));
+[v _TMR1CS `Vb ~T0 @X0 0 e@129 ]
+"2869
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2869: extern volatile __bit T1SYNC __attribute__((address(0x82)));
+[v _T1SYNC `Vb ~T0 @X0 0 e@130 ]
+"2866
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2866: extern volatile __bit T1OSCEN __attribute__((address(0x83)));
+[v _T1OSCEN `Vb ~T0 @X0 0 e@131 ]
+"2893
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2893: extern volatile __bit TMR1ON __attribute__((address(0x80)));
+[v _TMR1ON `Vb ~T0 @X0 0 e@128 ]
+"1255
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1255: extern volatile unsigned char OPTION_REG __attribute__((address(0x081)));
+[v _OPTION_REG `Vuc ~T0 @X0 0 e@129 ]
+"2878
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2878: extern volatile __bit TMR0IE __attribute__((address(0x5D)));
+[v _TMR0IE `Vb ~T0 @X0 0 e@93 ]
+"1375
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1375: extern volatile unsigned char TRISB __attribute__((address(0x086)));
+[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
+"1499
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1499: extern volatile unsigned char TRISD __attribute__((address(0x088)));
+[v _TRISD `Vuc ~T0 @X0 0 e@136 ]
+"340
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 340: extern volatile unsigned char PORTD __attribute__((address(0x008)));
+[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
+"1325
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1325: extern volatile unsigned char TRISA __attribute__((address(0x085)));
+[v _TRISA `Vuc ~T0 @X0 0 e@133 ]
+"1443
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1443:     struct {
+[s S58 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S58 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
+"1442
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1442: typedef union {
+[u S57 `S58 1 ]
+[n S57 . . ]
+"1454
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1454: extern volatile TRISCbits_t TRISCbits __attribute__((address(0x087)));
+[v _TRISCbits `VS57 ~T0 @X0 0 e@135 ]
+"1381
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1381:     struct {
+[s S56 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S56 . TRISB0 TRISB1 TRISB2 TRISB3 TRISB4 TRISB5 TRISB6 TRISB7 ]
+"1380
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1380: typedef union {
+[u S55 `S56 1 ]
+[n S55 . . ]
+"1392
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1392: extern volatile TRISBbits_t TRISBbits __attribute__((address(0x086)));
+[v _TRISBbits `VS55 ~T0 @X0 0 e@134 ]
+"6 ./UART.h
+[; ;./UART.h: 6: void UART_Write(char data);
+[v _UART_Write `(v ~T0 @X0 0 ef1`uc ]
+"1505 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1505:     struct {
+[s S60 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S60 . TRISD0 TRISD1 TRISD2 TRISD3 TRISD4 TRISD5 TRISD6 TRISD7 ]
+"1504
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1504: typedef union {
+[u S59 `S60 1 ]
+[n S59 . . ]
+"1516
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1516: extern volatile TRISDbits_t TRISDbits __attribute__((address(0x088)));
+[v _TRISDbits `VS59 ~T0 @X0 0 e@136 ]
+"12 ./UART.h
+[; ;./UART.h: 12: char UART_Data_Ready();
+[v _UART_Data_Ready `(uc ~T0 @X0 0 e? ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 54: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"61
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 61: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"68
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 68: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"75
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 75: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"161
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 161: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"168
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 168: __asm("PORTA equ 05h");
+[; <" PORTA equ 05h ;# ">
+"218
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 218: __asm("PORTB equ 06h");
+[; <" PORTB equ 06h ;# ">
+"280
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 280: __asm("PORTC equ 07h");
+[; <" PORTC equ 07h ;# ">
+"342
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 342: __asm("PORTD equ 08h");
+[; <" PORTD equ 08h ;# ">
+"404
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 404: __asm("PORTE equ 09h");
+[; <" PORTE equ 09h ;# ">
+"436
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 436: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"456
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 456: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"534
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 534: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"596
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 596: __asm("PIR2 equ 0Dh");
+[; <" PIR2 equ 0Dh ;# ">
+"636
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 636: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"643
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 643: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"650
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 650: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"657
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 657: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"732
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 732: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"739
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 739: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"810
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 810: __asm("SSPBUF equ 013h");
+[; <" SSPBUF equ 013h ;# ">
+"817
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 817: __asm("SSPCON equ 014h");
+[; <" SSPCON equ 014h ;# ">
+"887
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 887: __asm("CCPR1 equ 015h");
+[; <" CCPR1 equ 015h ;# ">
+"894
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 894: __asm("CCPR1L equ 015h");
+[; <" CCPR1L equ 015h ;# ">
+"901
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 901: __asm("CCPR1H equ 016h");
+[; <" CCPR1H equ 016h ;# ">
+"908
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 908: __asm("CCP1CON equ 017h");
+[; <" CCP1CON equ 017h ;# ">
+"966
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 966: __asm("RCSTA equ 018h");
+[; <" RCSTA equ 018h ;# ">
+"1061
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1061: __asm("TXREG equ 019h");
+[; <" TXREG equ 019h ;# ">
+"1068
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1068: __asm("RCREG equ 01Ah");
+[; <" RCREG equ 01Ah ;# ">
+"1075
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1075: __asm("CCPR2 equ 01Bh");
+[; <" CCPR2 equ 01Bh ;# ">
+"1082
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1082: __asm("CCPR2L equ 01Bh");
+[; <" CCPR2L equ 01Bh ;# ">
+"1089
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1089: __asm("CCPR2H equ 01Ch");
+[; <" CCPR2H equ 01Ch ;# ">
+"1096
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1096: __asm("CCP2CON equ 01Dh");
+[; <" CCP2CON equ 01Dh ;# ">
+"1154
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1154: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"1161
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1161: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"1257
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1257: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"1327
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1327: __asm("TRISA equ 085h");
+[; <" TRISA equ 085h ;# ">
+"1377
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1377: __asm("TRISB equ 086h");
+[; <" TRISB equ 086h ;# ">
+"1439
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1439: __asm("TRISC equ 087h");
+[; <" TRISC equ 087h ;# ">
+"1501
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1501: __asm("TRISD equ 088h");
+[; <" TRISD equ 088h ;# ">
+"1563
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1563: __asm("TRISE equ 089h");
+[; <" TRISE equ 089h ;# ">
+"1620
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1620: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1682
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1682: __asm("PIE2 equ 08Dh");
+[; <" PIE2 equ 08Dh ;# ">
+"1722
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1722: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1756
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1756: __asm("SSPCON2 equ 091h");
+[; <" SSPCON2 equ 091h ;# ">
+"1818
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1818: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"1825
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1825: __asm("SSPADD equ 093h");
+[; <" SSPADD equ 093h ;# ">
+"1832
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1832: __asm("SSPSTAT equ 094h");
+[; <" SSPSTAT equ 094h ;# ">
+"2001
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2001: __asm("TXSTA equ 098h");
+[; <" TXSTA equ 098h ;# ">
+"2082
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2082: __asm("SPBRG equ 099h");
+[; <" SPBRG equ 099h ;# ">
+"2089
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2089: __asm("CMCON equ 09Ch");
+[; <" CMCON equ 09Ch ;# ">
+"2159
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2159: __asm("CVRCON equ 09Dh");
+[; <" CVRCON equ 09Dh ;# ">
+"2224
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2224: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"2231
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2231: __asm("ADCON1 equ 09Fh");
+[; <" ADCON1 equ 09Fh ;# ">
+"2290
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2290: __asm("EEDATA equ 010Ch");
+[; <" EEDATA equ 010Ch ;# ">
+"2297
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2297: __asm("EEADR equ 010Dh");
+[; <" EEADR equ 010Dh ;# ">
+"2304
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2304: __asm("EEDATH equ 010Eh");
+[; <" EEDATH equ 010Eh ;# ">
+"2311
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2311: __asm("EEADRH equ 010Fh");
+[; <" EEADRH equ 010Fh ;# ">
+"2318
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2318: __asm("EECON1 equ 018Ch");
+[; <" EECON1 equ 018Ch ;# ">
+"2363
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2363: __asm("EECON2 equ 018Dh");
+[; <" EECON2 equ 018Dh ;# ">
+"40 main.c
+[; ;main.c: 40: 
+[p x FOSC = HS ]
+"41
+[; ;main.c: 41:   a = ADC_Read(2);
+[p x WDTE = OFF ]
+"42
+[; ;main.c: 42:   b = (a*27.5)/56;
+[p x PWRTE = OFF ]
+"43
+[; ;main.c: 43:   return b;
+[p x BOREN = OFF ]
+"44
+[; ;main.c: 44: }
+[p x LVP = OFF ]
+"45
+[; ;main.c: 45: 
+[p x CPD = OFF ]
+"46
+[; ;main.c: 46: int get_humidade()
+[p x WRT = OFF ]
+"47
+[; ;main.c: 47: {
+[p x CP = OFF ]
+"49
+[; ;main.c: 49:   a = ADC_Read(1);
+[v _PWM_freq `l ~T0 @X0 1 e ]
+[i _PWM_freq
+-> -> 5000 `i `l
+]
+"50
+[; ;main.c: 50:   return a;
+[v _fan_rpm `i ~T0 @X0 1 e ]
+[i _fan_rpm
+-> 0 `i
+]
+"51
+[; ;main.c: 51: }
+[v _fan_count `i ~T0 @X0 1 e ]
+[i _fan_count
+-> 0 `i
+]
+"52
+[; ;main.c: 52: 
+[v _count_timer_fan_speed `i ~T0 @X0 1 e ]
+[i _count_timer_fan_speed
+-> 0 `i
+]
+"53
+[; ;main.c: 53: void print_json()
+[v _count_minute `i ~T0 @X0 1 e ]
+[i _count_minute
+-> 0 `i
+]
+"54
+[; ;main.c: 54: {
+[v _running `i ~T0 @X0 1 e ]
+[i _running
+-> 0 `i
+]
+"56
+[; ;main.c: 56:   UART_Write_Text(json);
+[v _Data_atual `S96 ~T0 @X0 1 e ]
+"58
+[; ;main.c: 58: }
+[v _LAST_ALARM `i ~T0 @X0 1 e ]
+[i _LAST_ALARM
+-> 0 `i
+]
+"60
+[; ;main.c: 60: Calibrar_struct read_from_MR(Calibrar_struct calibracao)
+[v _json `uc ~T0 @X0 -> 80 `i e ]
+"63
+[; ;main.c: 63:     int int_input = 0;
+[v _PWM_Initialize `(v ~T0 @X0 1 ef ]
+"64
+[; ;main.c: 64:     UART_Read_Text(output,8);
+{
+[e :U _PWM_Initialize ]
+[f ]
+"65
+[; ;main.c: 65:     output[7]='\0';
+[e = _PR2 -> - / -> 4000000 `l * * _PWM_freq -> -> 4 `i `l -> -> 4 `i `l -> -> 1 `i `l `uc ]
+"66
+[; ;main.c: 66:     output[6]='\n';
+[e = _CCP1M3 -> -> 1 `i `b ]
+"67
+[; ;main.c: 67:     UART_Write_Text(output);
+[e = _CCP1M2 -> -> 1 `i `b ]
+"68
+[; ;main.c: 68: 
+[e = _T2CKPS0 -> -> 1 `i `b ]
+"69
+[; ;main.c: 69:     if(output[0]==49)
+[e = _T2CKPS1 -> -> 0 `i `b ]
+"70
+[; ;main.c: 70:     {
+[e = _TMR2ON -> -> 1 `i `b ]
+"71
+[; ;main.c: 71:         UART_Write_Text("1 Pedido de informacao \n");
+[e = _TRISC2 -> -> 0 `i `b ]
+"72
+[; ;main.c: 72:         print_json();
+[e :UE 98 ]
+}
+"74
+[; ;main.c: 74:     }
+[v _PWM_Duty `(v ~T0 @X0 1 ef1`ui ]
+"75
+[; ;main.c: 75:     int_input = (output[2]-48)*1000+(output[3]-48)*100+(output[4]-48)*10+(output[5]-48);
+{
+[e :U _PWM_Duty ]
+"74
+[; ;main.c: 74:     }
+[v _duty `ui ~T0 @X0 1 r1 ]
+"75
+[; ;main.c: 75:     int_input = (output[2]-48)*1000+(output[3]-48)*100+(output[4]-48)*10+(output[5]-48);
+[f ]
+"76
+[; ;main.c: 76:     UART_Write_Decimal(int_input);
+[e $ ! < _duty -> -> 1023 `i `ui 100  ]
+"77
+[; ;main.c: 77:     UART_Write_Text("\n");
+{
+"78
+[; ;main.c: 78:     switch (output[1])
+[e = _duty -> * / -> _duty `f -> -> 1023 `i `f -> / -> 4000000 `l * _PWM_freq -> -> 4 `i `l `f `ui ]
+"79
+[; ;main.c: 79:     {
+[e = _CCP1X -> & _duty -> -> 1 `i `ui `b ]
+"80
+[; ;main.c: 80:         case 48:
+[e = _CCP1Y -> & _duty -> -> 2 `i `ui `b ]
+"81
+[; ;main.c: 81:             UART_Write_Text("0 0 vento \n");
+[e = _CCPR1L -> >> _duty -> 2 `i `uc ]
+"82
+[; ;main.c: 82:             calibracao.rajada_vento = int_input;
+}
+[e :U 100 ]
+"83
+[; ;main.c: 83:             break;
+[e :UE 99 ]
+}
+"85
+[; ;main.c: 85:             UART_Write_Text("0 1 humindade \n");
+[v _get_temperatura `(i ~T0 @X0 1 ef ]
+"86
+[; ;main.c: 86:             calibracao.humidade_incendio = int_input;
+{
+[e :U _get_temperatura ]
+[f ]
+"87
+[; ;main.c: 87:             break;
+[v _a `i ~T0 @X0 1 a ]
+"88
+[; ;main.c: 88:         case 50:
+[v _b `i ~T0 @X0 1 a ]
+"90
+[; ;main.c: 90:             calibracao.temperatuta_incendio = int_input;
+[e = _a -> ( _ADC_Read (1 -> -> 2 `i `uc `i ]
+"91
+[; ;main.c: 91:             break;
+[e = _b -> / * -> _a `d .27.5 -> -> 56 `i `d `i ]
+"92
+[; ;main.c: 92:     }
+[e ) _b ]
+[e $UE 101  ]
+"93
+[; ;main.c: 93:     return calibracao;
+[e :UE 101 ]
+}
+"95
+[; ;main.c: 95: 
+[v _get_humidade `(i ~T0 @X0 1 ef ]
+"96
+[; ;main.c: 96: void __attribute__((picinterrupt(("")))) Interrupt_Time()
+{
+[e :U _get_humidade ]
+[f ]
+"97
+[; ;main.c: 97: {
+[v _a `i ~T0 @X0 1 a ]
+"98
+[; ;main.c: 98:   if (TMR0IF==1)
+[e = _a -> ( _ADC_Read (1 -> -> 1 `i `uc `i ]
+"99
+[; ;main.c: 99:   {
+[e ) _a ]
+[e $UE 102  ]
+"100
+[; ;main.c: 100:     count_timer_fan_speed++;
+[e :UE 102 ]
+}
+"102
+[; ;main.c: 102:     TMR0=218;
+[v _print_json `(v ~T0 @X0 1 ef ]
+"103
+[; ;main.c: 103:     T0IF=0;
+{
+[e :U _print_json ]
+[f ]
+"104
+[; ;main.c: 104:     if(count_timer_fan_speed==10)
+[e ( _sprintf (1 , , , , (. , &U _json :s 1C . _Data_atual 0 . _Data_atual 1 . _Data_atual 2 . _Data_atual 3 ]
+"105
+[; ;main.c: 105:     {
+[e ( _UART_Write_Text (1 &U _json ]
+"106
+[; ;main.c: 106:       count_timer_fan_speed=0;
+[e ( _UART_Write_Text (1 :s 2C ]
+"107
+[; ;main.c: 107:       fan_count=TMR1L;
+[e :UE 103 ]
+}
+"109
+[; ;main.c: 109:       TMR0IF=0;
+[v _read_from_MR `(S97 ~T0 @X0 1 ef1`S97 ]
+"110
+[; ;main.c: 110:       fan_rpm=(fan_count/7)*600;
+{
+[e :U _read_from_MR ]
+"109
+[; ;main.c: 109:       TMR0IF=0;
+[v _calibracao `S97 ~T0 @X0 1 r1 ]
+"110
+[; ;main.c: 110:       fan_rpm=(fan_count/7)*600;
+[f ]
+"111
+[; ;main.c: 111:     }
+[v _output `uc ~T0 @X0 -> 8 `i a ]
+"112
+[; ;main.c: 112: 
+[v _int_input `i ~T0 @X0 1 a ]
+[e = _int_input -> 0 `i ]
+"113
+[; ;main.c: 113:     if(count_minute==500)
+[e ( _UART_Read_Text (2 , &U _output -> -> 8 `i `ui ]
+"114
+[; ;main.c: 114:     {
+[e = *U + &U _output * -> -> -> 7 `i `ui `ux -> -> # *U &U _output `ui `ux -> -> 0 `ui `uc ]
+"115
+[; ;main.c: 115:       count_minute=0;
+[e = *U + &U _output * -> -> -> 6 `i `ui `ux -> -> # *U &U _output `ui `ux -> -> 10 `ui `uc ]
+"116
+[; ;main.c: 116:       if (running==1)
+[e ( _UART_Write_Text (1 &U _output ]
+"118
+[; ;main.c: 118:         print_json();
+[e $ ! == -> *U + &U _output * -> -> -> 0 `i `ui `ux -> -> # *U &U _output `ui `ux `i -> 49 `i 105  ]
+"119
+[; ;main.c: 119:       }
+{
+"120
+[; ;main.c: 120:     }
+[e ( _UART_Write_Text (1 :s 3C ]
+"121
+[; ;main.c: 121:   }
+[e ( _print_json ..  ]
+"122
+[; ;main.c: 122: 
+[e ) _calibracao ]
+[e $UE 104  ]
+"123
+[; ;main.c: 123:   if (INTF==1){
+}
+[e :U 105 ]
+"124
+[; ;main.c: 124:     INTF=0;
+[e = _int_input + + + * - -> *U + &U _output * -> -> -> 2 `i `ui `ux -> -> # *U &U _output `ui `ux `i -> 48 `i -> 1000 `i * - -> *U + &U _output * -> -> -> 3 `i `ui `ux -> -> # *U &U _output `ui `ux `i -> 48 `i -> 100 `i * - -> *U + &U _output * -> -> -> 4 `i `ui `ux -> -> # *U &U _output `ui `ux `i -> 48 `i -> 10 `i - -> *U + &U _output * -> -> -> 5 `i `ui `ux -> -> # *U &U _output `ui `ux `i -> 48 `i ]
+"125
+[; ;main.c: 125:     if (running==1)
+[e ( _UART_Write_Decimal (1 _int_input ]
+"126
+[; ;main.c: 126:     {
+[e ( _UART_Write_Text (1 :s 4C ]
+"127
+[; ;main.c: 127:       running = 0;
+[e $U 107  ]
+"128
+[; ;main.c: 128:       UART_Write_Text("Sleep Mode.");
+{
+"129
+[; ;main.c: 129:       UART_Write_Text("\n");
+[e :U 108 ]
+"130
+[; ;main.c: 130:     }else{
+[e ( _UART_Write_Text (1 :s 5C ]
+"131
+[; ;main.c: 131:       running = 1;
+[e = . _calibracao 0 _int_input ]
+"132
+[; ;main.c: 132:       UART_Write_Text("Waking Up!");
+[e $U 106  ]
+"133
+[; ;main.c: 133:       UART_Write_Text("\n");
+[e :U 109 ]
+"134
+[; ;main.c: 134:     }
+[e ( _UART_Write_Text (1 :s 6C ]
+"135
+[; ;main.c: 135:   }
+[e = . _calibracao 1 _int_input ]
+"136
+[; ;main.c: 136: }
+[e $U 106  ]
+"137
+[; ;main.c: 137: 
+[e :U 110 ]
+"138
+[; ;main.c: 138: unsigned char teclado(unsigned int timeout)
+[e ( _UART_Write_Text (1 :s 7C ]
+"139
+[; ;main.c: 139: {
+[e = . _calibracao 2 _int_input ]
+"140
+[; ;main.c: 140:   unsigned int to=0;
+[e $U 106  ]
+"141
+[; ;main.c: 141:   unsigned char i;
+}
+[e $U 106  ]
+[e :U 107 ]
+[e [\ -> *U + &U _output * -> -> -> 1 `i `ui `ux -> -> # *U &U _output `ui `ux `i , $ -> 48 `i 108
+ , $ -> 49 `i 109
+ , $ -> 50 `i 110
+ 106 ]
+[e :U 106 ]
+"142
+[; ;main.c: 142:   unsigned char ret=0;
+[e ) _calibracao ]
+[e $UE 104  ]
+"143
+[; ;main.c: 143:   unsigned char tmp=PORTB;
+[e :UE 104 ]
+}
+[v $root$_Interrupt_Time `(v ~T0 @X0 0 e ]
+"145
+[; ;main.c: 145: 
+[v _Interrupt_Time `(v ~T1 @X0 1 ef ]
+"146
+[; ;main.c: 146: 
+{
+[e :U _Interrupt_Time ]
+[f ]
+"147
+[; ;main.c: 147:   while(((to < timeout)||(!timeout))&&(!ret))
+[e $ ! == -> _TMR0IF `i -> 1 `i 112  ]
+"148
+[; ;main.c: 148:   {
+{
+"149
+[; ;main.c: 149:     for(i=0;i<3;i++)
+[e ++ _count_timer_fan_speed -> 1 `i ]
+"150
+[; ;main.c: 150:     {
+[e ++ _count_minute -> 1 `i ]
+"151
+[; ;main.c: 151:       PORTB|=~linha[i];
+[e = _TMR0 -> -> 218 `i `uc ]
+"152
+[; ;main.c: 152:       if(!PORTDbits.RD3)
+[e = _T0IF -> -> 0 `i `b ]
+"153
+[; ;main.c: 153:       {
+[e $ ! == _count_timer_fan_speed -> 10 `i 113  ]
+"154
+[; ;main.c: 154:           _delay((unsigned long)((20)*(4000000/4000.0)));
+{
+"155
+[; ;main.c: 155:           if(!PORTDbits.RD3)
+[e = _count_timer_fan_speed -> 0 `i ]
+"156
+[; ;main.c: 156:           {
+[e = _fan_count -> _TMR1L `i ]
+"157
+[; ;main.c: 157:               while(!PORTDbits.RD3);
+[e = _TMR1L -> -> 0 `i `uc ]
+"158
+[; ;main.c: 158:               ret= 1+i;
+[e = _TMR0IF -> -> 0 `i `b ]
+"159
+[; ;main.c: 159:               break;
+[e = _fan_rpm * / _fan_count -> 7 `i -> 600 `i ]
+"160
+[; ;main.c: 160:           }
+}
+[e :U 113 ]
+"162
+[; ;main.c: 162:       if(!PORTDbits.RD2)
+[e $ ! == _count_minute -> 500 `i 114  ]
+"163
+[; ;main.c: 163:       {
+{
+"164
+[; ;main.c: 164:           _delay((unsigned long)((20)*(4000000/4000.0)));
+[e = _count_minute -> 0 `i ]
+"165
+[; ;main.c: 165:           if(!PORTDbits.RD2)
+[e $ ! == _running -> 1 `i 115  ]
+"166
+[; ;main.c: 166:           {
+{
+"167
+[; ;main.c: 167:               while(!PORTDbits.RD2);
+[e ( _print_json ..  ]
+"168
+[; ;main.c: 168:               ret= 4+i;
+}
+[e :U 115 ]
+"169
+[; ;main.c: 169:               break;
+}
+[e :U 114 ]
+"170
+[; ;main.c: 170:           }
+}
+[e :U 112 ]
+"172
+[; ;main.c: 172:       if(!PORTDbits.RD1)
+[e $ ! == -> _INTF `i -> 1 `i 116  ]
+{
+"173
+[; ;main.c: 173:       {
+[e = _INTF -> -> 0 `i `b ]
+"174
+[; ;main.c: 174:           _delay((unsigned long)((20)*(4000000/4000.0)));
+[e $ ! == _running -> 1 `i 117  ]
+"175
+[; ;main.c: 175:           if(!PORTDbits.RD1)
+{
+"176
+[; ;main.c: 176:           {
+[e = _running -> 0 `i ]
+"177
+[; ;main.c: 177:               while(!PORTDbits.RD1);
+[e ( _UART_Write_Text (1 :s 8C ]
+"178
+[; ;main.c: 178:               ret= 7+i;
+[e ( _UART_Write_Text (1 :s 9C ]
+"179
+[; ;main.c: 179:               break;
+}
+[e $U 118  ]
+[e :U 117 ]
+{
+"180
+[; ;main.c: 180:           }
+[e = _running -> 1 `i ]
+"181
+[; ;main.c: 181:       }
+[e ( _UART_Write_Text (1 :s 10C ]
+"182
+[; ;main.c: 182:       if(!PORTDbits.RD0)
+[e ( _UART_Write_Text (1 :s 11C ]
+"183
+[; ;main.c: 183:       {
+}
+[e :U 118 ]
+"184
+[; ;main.c: 184:           _delay((unsigned long)((20)*(4000000/4000.0)));
+}
+[e :U 116 ]
+"185
+[; ;main.c: 185:           if(!PORTDbits.RD0)
+[e :UE 111 ]
+}
+"187
+[; ;main.c: 187:               while(!PORTDbits.RD0);
+[v _teclado `(uc ~T0 @X0 1 ef1`ui ]
+"188
+[; ;main.c: 188:               ret= 10+i;
+{
+[e :U _teclado ]
+"187
+[; ;main.c: 187:               while(!PORTDbits.RD0);
+[v _timeout `ui ~T0 @X0 1 r1 ]
+"188
+[; ;main.c: 188:               ret= 10+i;
+[f ]
+"189
+[; ;main.c: 189:               break;
+[v _to `ui ~T0 @X0 1 a ]
+[e = _to -> -> 0 `i `ui ]
+"190
+[; ;main.c: 190:           }
+[v _i `uc ~T0 @X0 1 a ]
+"191
+[; ;main.c: 191:       }
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 0 `i `uc ]
+"192
+[; ;main.c: 192:       PORTB &=linha[i];
+[v _tmp `uc ~T0 @X0 1 a ]
+[e = _tmp _PORTB ]
+"193
+[; ;main.c: 193:     }
+[v F1057 `Cuc ~T0 @X0 -> 4 `i s linha ]
+[i F1057
+:U ..
+-> -> 1 `i `uc
+-> -> 2 `i `uc
+-> -> 4 `i `uc
+..
+]
+"196
+[; ;main.c: 196:   }
+[e $U 120  ]
+[e :U 121 ]
+"197
+[; ;main.c: 197: 
+{
+"198
+[; ;main.c: 198:   if(!ret)ret=255;
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 3 `i 123  ]
+[e $U 124  ]
+[e :U 123 ]
+"199
+[; ;main.c: 199:   if(ret == 11)ret=0;
+{
+"200
+[; ;main.c: 200:   PORTB=tmp;
+[e =| _PORTB -> ~ -> *U + &U F1057 * -> _i `ux -> -> # *U &U F1057 `ui `ux `i `Vuc ]
+"201
+[; ;main.c: 201:   return ret;
+[e $ ! ! != -> . . _PORTDbits 0 3 `i -> 0 `i 126  ]
+"202
+[; ;main.c: 202: }
+{
+"203
+[; ;main.c: 203: 
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"204
+[; ;main.c: 204: void move_the_fan()
+[e $ ! ! != -> . . _PORTDbits 0 3 `i -> 0 `i 127  ]
+"205
+[; ;main.c: 205: {
+{
+"206
+[; ;main.c: 206:   int a= ADC_Read(0);
+[e $U 128  ]
+[e :U 129 ]
+[e :U 128 ]
+[e $ ! != -> . . _PORTDbits 0 3 `i -> 0 `i 129  ]
+[e :U 130 ]
+"207
+[; ;main.c: 207:   PWM_Duty(a);
+[e = _ret -> + -> 1 `i -> _i `i `uc ]
+"208
+[; ;main.c: 208: }
+[e $U 124  ]
+"209
+[; ;main.c: 209: 
+}
+[e :U 127 ]
+"210
+[; ;main.c: 210: Data_struct Aquisicao_Dados()
+}
+[e :U 126 ]
+"211
+[; ;main.c: 211: {
+[e $ ! ! != -> . . _PORTDbits 0 2 `i -> 0 `i 131  ]
+"212
+[; ;main.c: 212:   Data_struct aqui;
+{
+"213
+[; ;main.c: 213:   aqui.huminade=get_humidade();
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"214
+[; ;main.c: 214:   aqui.temperatura=get_temperatura();
+[e $ ! ! != -> . . _PORTDbits 0 2 `i -> 0 `i 132  ]
+"215
+[; ;main.c: 215:   aqui.velocidade=fan_rpm;
+{
+"216
+[; ;main.c: 216:   return aqui;
+[e $U 133  ]
+[e :U 134 ]
+[e :U 133 ]
+[e $ ! != -> . . _PORTDbits 0 2 `i -> 0 `i 134  ]
+[e :U 135 ]
+"217
+[; ;main.c: 217: }
+[e = _ret -> + -> 4 `i -> _i `i `uc ]
+"218
+[; ;main.c: 218: 
+[e $U 124  ]
+"219
+[; ;main.c: 219: void write_to_EPPROM()
+}
+[e :U 132 ]
+"220
+[; ;main.c: 220: {
+}
+[e :U 131 ]
+"221
+[; ;main.c: 221:   char text1[30] =" Trabalho SAD \n \0";
+[e $ ! ! != -> . . _PORTDbits 0 1 `i -> 0 `i 136  ]
+"222
+[; ;main.c: 222:   int count_string = strlen(text1);
+{
+"223
+[; ;main.c: 223:   int epro_count=0;
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"224
+[; ;main.c: 224: 
+[e $ ! ! != -> . . _PORTDbits 0 1 `i -> 0 `i 137  ]
+"225
+[; ;main.c: 225:   I2C_Begin();
+{
+"226
+[; ;main.c: 226:   I2C_Write(160);
+[e $U 138  ]
+[e :U 139 ]
+[e :U 138 ]
+[e $ ! != -> . . _PORTDbits 0 1 `i -> 0 `i 139  ]
+[e :U 140 ]
+"227
+[; ;main.c: 227:   I2C_Write(0);
+[e = _ret -> + -> 7 `i -> _i `i `uc ]
+"228
+[; ;main.c: 228: 
+[e $U 124  ]
+"229
+[; ;main.c: 229:   while(epro_count<count_string)
+}
+[e :U 137 ]
+"230
+[; ;main.c: 230:   {
+}
+[e :U 136 ]
+"231
+[; ;main.c: 231:     I2C_Write(text1[epro_count]);
+[e $ ! ! != -> . . _PORTDbits 0 0 `i -> 0 `i 141  ]
+"232
+[; ;main.c: 232:     epro_count++;
+{
+"233
+[; ;main.c: 233:   }
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"234
+[; ;main.c: 234:   I2C_End();
+[e $ ! ! != -> . . _PORTDbits 0 0 `i -> 0 `i 142  ]
+"235
+[; ;main.c: 235: }
+{
+"236
+[; ;main.c: 236: 
+[e $U 143  ]
+[e :U 144 ]
+[e :U 143 ]
+[e $ ! != -> . . _PORTDbits 0 0 `i -> 0 `i 144  ]
+[e :U 145 ]
+"237
+[; ;main.c: 237: void read_from_EPPROM()
+[e = _ret -> + -> 10 `i -> _i `i `uc ]
+"238
+[; ;main.c: 238: {
+[e $U 124  ]
+"239
+[; ;main.c: 239:   char data[10];
+}
+[e :U 142 ]
+"240
+[; ;main.c: 240: 
+}
+[e :U 141 ]
+"241
+[; ;main.c: 241:   I2C_Begin();
+[e =& _PORTB -> *U + &U F1057 * -> _i `ux -> -> # *U &U F1057 `ui `ux `Vuc ]
+"242
+[; ;main.c: 242:   I2C_Write(160);
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 3 `i 123  ]
+[e :U 124 ]
+}
+"243
+[; ;main.c: 243: 
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"244
+[; ;main.c: 244:   I2C_Write(1);
+[e =+ _to -> -> 5 `i `ui ]
+"245
+[; ;main.c: 245: 
+}
+[e :U 120 ]
+"196
+[; ;main.c: 196:   }
+[e $ && || < _to _timeout ! != _timeout -> -> 0 `i `ui ! != -> _ret `i -> 0 `i 121  ]
+[e :U 122 ]
+"247
+[; ;main.c: 247:   I2C_Write(160);
+[e $ ! ! != -> _ret `i -> 0 `i 146  ]
+[e = _ret -> -> 255 `i `uc ]
+[e :U 146 ]
+"248
+[; ;main.c: 248: 
+[e $ ! == -> _ret `i -> 11 `i 147  ]
+[e = _ret -> -> 0 `i `uc ]
+[e :U 147 ]
+"249
+[; ;main.c: 249:   I2C_Read(data[0]);
+[e = _PORTB _tmp ]
+"250
+[; ;main.c: 250:   I2C_End();
+[e ) _ret ]
+[e $UE 119  ]
+"251
+[; ;main.c: 251:   UART_Write_Text(data);
+[e :UE 119 ]
+}
+"253
+[; ;main.c: 253: 
+[v _move_the_fan `(v ~T0 @X0 1 ef ]
+"254
+[; ;main.c: 254: void alarm()
+{
+[e :U _move_the_fan ]
+[f ]
+"255
+[; ;main.c: 255: {
+[v _a `i ~T0 @X0 1 a ]
+[e = _a -> ( _ADC_Read (1 -> -> 0 `i `uc `i ]
+"256
+[; ;main.c: 256:   if ((Data_atual.alarm==1 || Data_atual.alarm==2 || Data_atual.alarm==3) && LAST_ALARM!=Data_atual.alarm)
+[e ( _PWM_Duty (1 -> _a `ui ]
+"257
+[; ;main.c: 257:   {
+[e :UE 148 ]
+}
+"259
+[; ;main.c: 259:     PORTBbits.RB7=1;
+[v _Aquisicao_Dados `(S96 ~T0 @X0 1 ef ]
+"260
+[; ;main.c: 260:     print_json();
+{
+[e :U _Aquisicao_Dados ]
+[f ]
+"261
+[; ;main.c: 261:     LAST_ALARM=Data_atual.alarm;
+[v _aqui `S96 ~T0 @X0 1 a ]
+"262
+[; ;main.c: 262:   }else if(Data_atual.alarm==0){
+[e = . _aqui 1 ( _get_humidade ..  ]
+"263
+[; ;main.c: 263:     PORTCbits.RC1=0;
+[e = . _aqui 0 ( _get_temperatura ..  ]
+"264
+[; ;main.c: 264:     PORTBbits.RB7=0;
+[e = . _aqui 2 _fan_rpm ]
+"265
+[; ;main.c: 265:     LAST_ALARM=0;
+[e ) _aqui ]
+[e $UE 149  ]
+"266
+[; ;main.c: 266:   }
+[e :UE 149 ]
+}
+"268
+[; ;main.c: 268: 
+[v _write_to_EPPROM `(v ~T0 @X0 1 ef ]
+"269
+[; ;main.c: 269: void alarm_check(Calibrar_struct calibracao)
+{
+[e :U _write_to_EPPROM ]
+[f ]
+[v F1063 `uc ~T0 @X0 -> 30 `i s ]
+[i F1063
+:U ..
+"270
+[; ;main.c: 270: {
+-> 32 `c
+-> 84 `c
+-> 114 `c
+-> 97 `c
+-> 98 `c
+-> 97 `c
+-> 108 `c
+-> 104 `c
+-> 111 `c
+-> 32 `c
+-> 83 `c
+-> 65 `c
+-> 68 `c
+-> 32 `c
+-> 10 `c
+-> 32 `c
+-> 0 `c
+-> 0 `c
+..
+]
+[v _text1 `uc ~T0 @X0 -> 30 `i a ]
+[e = _text1 F1063 ]
+"271
+[; ;main.c: 271:   int magic = Data_atual.velocidade;
+[v _count_string `i ~T0 @X0 1 a ]
+[e = _count_string -> ( _strlen (1 -> &U _text1 `*Cuc `i ]
+"272
+[; ;main.c: 272:   if(Data_atual.huminade<calibracao.humidade_incendio && Data_atual.temperatura>calibracao.temperatuta_incendio && Data_atual.velocidade>calibracao.rajada_vento)
+[v _epro_count `i ~T0 @X0 1 a ]
+[e = _epro_count -> 0 `i ]
+"274
+[; ;main.c: 274:     Data_atual.alarm=1;
+[e ( _I2C_Begin ..  ]
+"275
+[; ;main.c: 275:     alarm();
+[e ( _I2C_Write (1 -> -> 160 `i `ui ]
+"276
+[; ;main.c: 276:   }else if(Data_atual.velocidade>magic){
+[e ( _I2C_Write (1 -> -> 0 `i `ui ]
+"278
+[; ;main.c: 278:     alarm();
+[e $U 151  ]
+[e :U 152 ]
+"279
+[; ;main.c: 279:   }else{
+{
+"280
+[; ;main.c: 280:     Data_atual.alarm=0;
+[e ( _I2C_Write (1 -> *U + &U _text1 * -> -> _epro_count `ui `ux -> -> # *U &U _text1 `ui `ux `ui ]
+"281
+[; ;main.c: 281:     alarm();
+[e ++ _epro_count -> 1 `i ]
+"282
+[; ;main.c: 282:   }
+}
+[e :U 151 ]
+"278
+[; ;main.c: 278:     alarm();
+[e $ < _epro_count _count_string 152  ]
+[e :U 153 ]
+"283
+[; ;main.c: 283: }
+[e ( _I2C_End ..  ]
+"284
+[; ;main.c: 284: 
+[e :UE 150 ]
+}
+"286
+[; ;main.c: 286: int main(void)
+[v _read_from_EPPROM `(v ~T0 @X0 1 ef ]
+"287
+[; ;main.c: 287: {
+{
+[e :U _read_from_EPPROM ]
+[f ]
+"288
+[; ;main.c: 288:   UART_Init(9600);
+[v _data `uc ~T0 @X0 -> 10 `i a ]
+"290
+[; ;main.c: 290:   ADC_Init();
+[e ( _I2C_Begin ..  ]
+"291
+[; ;main.c: 291:   PWM_Initialize();
+[e ( _I2C_Write (1 -> -> 160 `i `ui ]
+"293
+[; ;main.c: 293: 
+[e ( _I2C_Write (1 -> -> 1 `i `ui ]
+"295
+[; ;main.c: 295:   PEIE=1;
+[e ( _I2C_Begin ..  ]
+"296
+[; ;main.c: 296:   INTE = 1;
+[e ( _I2C_Write (1 -> -> 160 `i `ui ]
+"298
+[; ;main.c: 298: 
+[e ( _I2C_Read (1 -> *U + &U _data * -> -> -> 0 `i `ui `ux -> -> # *U &U _data `ui `ux `us ]
+"299
+[; ;main.c: 299:   CCP1CON = 0X0F;
+[e ( _I2C_End ..  ]
+"300
+[; ;main.c: 300:   PR2 = 0x21;
+[e ( _UART_Write_Text (1 &U _data ]
+"301
+[; ;main.c: 301:   CCPR1L = 50;
+[e :UE 154 ]
+}
+"303
+[; ;main.c: 303: 
+[v _alarm `(v ~T0 @X0 1 ef ]
+"304
+[; ;main.c: 304: 
+{
+[e :U _alarm ]
+[f ]
+"305
+[; ;main.c: 305: 
+[e $ ! && || || == . _Data_atual 3 -> 1 `i == . _Data_atual 3 -> 2 `i == . _Data_atual 3 -> 3 `i != _LAST_ALARM . _Data_atual 3 156  ]
+"306
+[; ;main.c: 306:   T1CON=0;
+{
+"307
+[; ;main.c: 307:   TMR1CS=1;
+[e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
+"308
+[; ;main.c: 308:   T1SYNC=0;
+[e = . . _PORTBbits 0 7 -> -> 1 `i `uc ]
+"309
+[; ;main.c: 309:   T1OSCEN=1;
+[e ( _print_json ..  ]
+"310
+[; ;main.c: 310:   TMR1ON=1;
+[e = _LAST_ALARM . _Data_atual 3 ]
+"311
+[; ;main.c: 311: 
+}
+[e $U 157  ]
+[e :U 156 ]
+[e $ ! == . _Data_atual 3 -> 0 `i 158  ]
+{
+"312
+[; ;main.c: 312: 
+[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
+"313
+[; ;main.c: 313: 
+[e = . . _PORTBbits 0 7 -> -> 0 `i `uc ]
+"314
+[; ;main.c: 314:   OPTION_REG =0x07;
+[e = _LAST_ALARM -> 0 `i ]
+"315
+[; ;main.c: 315:   TMR0IE=1;
+}
+[e :U 158 ]
+[e :U 157 ]
+"316
+[; ;main.c: 316:   TMR0=217;
+[e :UE 155 ]
+}
+"318
+[; ;main.c: 318: 
+[v _alarm_check `(v ~T0 @X0 1 ef1`S97 ]
+"319
+[; ;main.c: 319: 
+{
+[e :U _alarm_check ]
+"318
+[; ;main.c: 318: 
+[v _calibracao `S97 ~T0 @X0 1 r1 ]
+"319
+[; ;main.c: 319: 
+[f ]
+"320
+[; ;main.c: 320:   PORTB = 0XFF;
+[v _magic `i ~T0 @X0 1 a ]
+[e = _magic . _Data_atual 2 ]
+"321
+[; ;main.c: 321:   TRISB = 0;
+[e $ ! && && < . _Data_atual 1 . _calibracao 1 > . _Data_atual 0 . _calibracao 2 > . _Data_atual 2 . _calibracao 0 160  ]
+"322
+[; ;main.c: 322:   TRISD = 0XFF;
+{
+"323
+[; ;main.c: 323:   PORTD = 0XFF;
+[e = . _Data_atual 3 -> 1 `i ]
+"324
+[; ;main.c: 324:   TRISD = 0XFF;
+[e ( _alarm ..  ]
+"325
+[; ;main.c: 325: 
+}
+[e $U 161  ]
+[e :U 160 ]
+[e $ ! > . _Data_atual 2 _magic 162  ]
+{
+"326
+[; ;main.c: 326:   TRISA = 0xFF;
+[e = . _Data_atual 3 -> 2 `i ]
+"327
+[; ;main.c: 327: 
+[e ( _alarm ..  ]
+"328
+[; ;main.c: 328:   TRISCbits.TRISC0 = 1;
+}
+[e $U 163  ]
+[e :U 162 ]
+{
+"329
+[; ;main.c: 329:   TRISCbits.TRISC1 = 0;
+[e = . _Data_atual 3 -> 0 `i ]
+"330
+[; ;main.c: 330:   TRISCbits.TRISC2 = 0;
+[e ( _alarm ..  ]
+"331
+[; ;main.c: 331:   TRISCbits.TRISC5 = 0;
+}
+[e :U 163 ]
+[e :U 161 ]
+"332
+[; ;main.c: 332: 
+[e :UE 159 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"335
+[; ;main.c: 335: 
+[v _main `(i ~T0 @X0 1 ef ]
+"336
+[; ;main.c: 336:   char password[4]= {0, 0, 0, 0};
+{
+[e :U _main ]
+[f ]
+"337
+[; ;main.c: 337:   int password_int = 0;
+[e ( _UART_Init (1 -> -> 9600 `i `l ]
+"338
+[; ;main.c: 338:   int pass_count = 0;
+[e ( _I2C_init (1 -> -> -> 250 `i `l `ul ]
+"339
+[; ;main.c: 339: 
+[e ( _ADC_Init ..  ]
+"340
+[; ;main.c: 340:   Data_atual.alarm=0;
+[e ( _PWM_Initialize ..  ]
+"343
+[; ;main.c: 343:   calibracao.rajada_vento = 2400;
+[e = _GIE -> -> 1 `i `b ]
+"344
+[; ;main.c: 344:   calibracao.humidade_incendio = 500;
+[e = _PEIE -> -> 1 `i `b ]
+"345
+[; ;main.c: 345:   calibracao.temperatuta_incendio = 40;
+[e = _INTE -> -> 1 `i `b ]
+"348
+[; ;main.c: 348:   UART_Write_Text("Inserir Password");
+[e = _CCP1CON -> -> 15 `i `uc ]
+"349
+[; ;main.c: 349:   UART_Write_Text("\n");
+[e = _PR2 -> -> 33 `i `uc ]
+"350
+[; ;main.c: 350: 
+[e = _CCPR1L -> -> 50 `i `uc ]
+"351
+[; ;main.c: 351:   while(password_int!=1234)
+[e = _TMR2ON -> -> 1 `i `b ]
+"355
+[; ;main.c: 355:     {
+[e = _T1CON -> -> 0 `i `uc ]
+"356
+[; ;main.c: 356:       TRISBbits.TRISB0 = 0;
+[e = _TMR1CS -> -> 1 `i `b ]
+"357
+[; ;main.c: 357:       TRISD=0x0F;
+[e = _T1SYNC -> -> 0 `i `b ]
+"358
+[; ;main.c: 358:       unsigned char abc = teclado(1500)+0x30;
+[e = _T1OSCEN -> -> 1 `i `b ]
+"359
+[; ;main.c: 359:       TRISD=0x00;
+[e = _TMR1ON -> -> 1 `i `b ]
+"363
+[; ;main.c: 363:         UART_Write(abc);
+[e = _OPTION_REG -> -> 7 `i `uc ]
+"364
+[; ;main.c: 364:         password[pass_count]=abc;
+[e = _TMR0IE -> -> 1 `i `b ]
+"365
+[; ;main.c: 365:         pass_count++;
+[e = _TMR0 -> -> 217 `i `uc ]
+"366
+[; ;main.c: 366:       }
+[e = _TMR0IE -> -> 1 `i `b ]
+"369
+[; ;main.c: 369: 
+[e = _PORTB -> -> 255 `i `uc ]
+"370
+[; ;main.c: 370:     if(password_int==1234)
+[e = _TRISB -> -> 0 `i `uc ]
+"371
+[; ;main.c: 371:     {
+[e = _TRISD -> -> 255 `i `uc ]
+"372
+[; ;main.c: 372:       UART_Write_Text("\n");
+[e = _PORTD -> -> 255 `i `uc ]
+"373
+[; ;main.c: 373:       UART_Write_Text("Password Correta");
+[e = _TRISD -> -> 255 `i `uc ]
+"375
+[; ;main.c: 375:     }else{
+[e = _TRISA -> -> 255 `i `uc ]
+"377
+[; ;main.c: 377:       UART_Write_Text("Password Incorreta");
+[e = . . _TRISCbits 0 0 -> -> 1 `i `uc ]
+"378
+[; ;main.c: 378:       UART_Write_Text("\n");
+[e = . . _TRISCbits 0 1 -> -> 0 `i `uc ]
+"379
+[; ;main.c: 379:     }
+[e = . . _TRISCbits 0 2 -> -> 0 `i `uc ]
+"380
+[; ;main.c: 380:   }
+[e = . . _TRISCbits 0 5 -> -> 0 `i `uc ]
+"382
+[; ;main.c: 382:   write_to_EPPROM();
+[e = . . _TRISBbits 0 0 -> -> 1 `i `uc ]
+"383
+[; ;main.c: 383:   read_from_EPPROM();
+[e = . . _TRISBbits 0 7 -> -> 0 `i `uc ]
+[v F1074 `uc ~T0 @X0 -> 4 `i s ]
+[i F1074
+:U ..
+"385
+[; ;main.c: 385:   running=1;
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+]
+[v _password `uc ~T0 @X0 -> 4 `i a ]
+[e = _password F1074 ]
+"386
+[; ;main.c: 386: 
+[v _password_int `i ~T0 @X0 1 a ]
+[e = _password_int -> 0 `i ]
+"387
+[; ;main.c: 387:   TRISBbits.TRISB3 = 1;
+[v _pass_count `i ~T0 @X0 1 a ]
+[e = _pass_count -> 0 `i ]
+"389
+[; ;main.c: 389:   PORTDbits.RD0 = 0;
+[e = . _Data_atual 3 -> 0 `i ]
+"391
+[; ;main.c: 391:   while(1)
+[v _calibracao `S97 ~T0 @X0 1 a ]
+"392
+[; ;main.c: 392:   {
+[e = . _calibracao 0 -> 2400 `i ]
+"393
+[; ;main.c: 393:     while (running==1)
+[e = . _calibracao 1 -> 500 `i ]
+"394
+[; ;main.c: 394:     {
+[e = . _calibracao 2 -> 40 `i ]
+"397
+[; ;main.c: 397: 
+[e ( _UART_Write_Text (1 :s 12C ]
+"398
+[; ;main.c: 398:       if(UART_Data_Ready())
+[e ( _UART_Write_Text (1 :s 13C ]
+"400
+[; ;main.c: 400: 
+[e $U 165  ]
+[e :U 166 ]
+"401
+[; ;main.c: 401:       alarm_check(calibracao);
+{
+"402
+[; ;main.c: 402: 
+[e = _pass_count -> 0 `i ]
+"403
+[; ;main.c: 403:       if (!PORTBbits.RB3)
+[e $U 168  ]
+[e :U 169 ]
+"404
+[; ;main.c: 404:       {
+{
+"405
+[; ;main.c: 405:         PORTCbits.RC5=1;
+[e = . . _TRISBbits 0 0 -> -> 0 `i `uc ]
+"406
+[; ;main.c: 406:       }else{
+[e = _TRISD -> -> 15 `i `uc ]
+"407
+[; ;main.c: 407:         PORTCbits.RC5=0;
+[v _abc `uc ~T0 @X0 1 a ]
+[e = _abc -> + -> ( _teclado (1 -> -> 1500 `i `ui `i -> 48 `i `uc ]
+"408
+[; ;main.c: 408:       }
+[e = _TRISD -> -> 0 `i `uc ]
+"409
+[; ;main.c: 409: 
+[e = . . _TRISBbits 0 0 -> -> 1 `i `uc ]
+"410
+[; ;main.c: 410:     _delay((unsigned long)((100)*(4000000/4000.0)));
+[e $ ! != -> _abc `i -> 47 `i 171  ]
+"411
+[; ;main.c: 411:     }
+{
+"412
+[; ;main.c: 412:   }
+[e ( _UART_Write (1 -> _abc `uc ]
+"413
+[; ;main.c: 413: }
+[e = *U + &U _password * -> -> _pass_count `ui `ux -> -> # *U &U _password `ui `ux -> _abc `uc ]
+"414
+[e ++ _pass_count -> 1 `i ]
+"415
+}
+[e :U 171 ]
+"416
+}
+[e :U 168 ]
+"403
+[; ;main.c: 403:       if (!PORTBbits.RB3)
+[e $ < _pass_count -> 4 `i 169  ]
+[e :U 170 ]
+"417
+[e = _password_int + + + * - -> *U + &U _password * -> -> -> 0 `i `ui `ux -> -> # *U &U _password `ui `ux `i -> 48 `i -> 1000 `i * - -> *U + &U _password * -> -> -> 1 `i `ui `ux -> -> # *U &U _password `ui `ux `i -> 48 `i -> 100 `i * - -> *U + &U _password * -> -> -> 2 `i `ui `ux -> -> # *U &U _password `ui `ux `i -> 48 `i -> 10 `i - -> *U + &U _password * -> -> -> 3 `i `ui `ux -> -> # *U &U _password `ui `ux `i -> 48 `i ]
+"419
+[e $ ! == _password_int -> 1234 `i 172  ]
+"420
+{
+"421
+[e ( _UART_Write_Text (1 :s 14C ]
+"422
+[e ( _UART_Write_Text (1 :s 15C ]
+"423
+[e ( _UART_Write_Text (1 :s 16C ]
+"424
+}
+[e $U 173  ]
+[e :U 172 ]
+{
+"425
+[e ( _UART_Write_Text (1 :s 17C ]
+"426
+[e ( _UART_Write_Text (1 :s 18C ]
+"427
+[e ( _UART_Write_Text (1 :s 19C ]
+"428
+}
+[e :U 173 ]
+"429
+}
+[e :U 165 ]
+"400
+[; ;main.c: 400: 
+[e $ != _password_int -> 1234 `i 166  ]
+[e :U 167 ]
+"431
+[e ( _write_to_EPPROM ..  ]
+"432
+[e ( _read_from_EPPROM ..  ]
+"434
+[e = _running -> 1 `i ]
+"436
+[e = . . _TRISBbits 0 3 -> -> 1 `i `uc ]
+"437
+[e = . . _TRISDbits 0 0 -> -> 0 `i `uc ]
+"438
+[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
+"440
+[e :U 175 ]
+"441
+{
+"442
+[e $U 177  ]
+[e :U 178 ]
+"443
+{
+"444
+[e = _Data_atual ( _Aquisicao_Dados ..  ]
+"445
+[e ( _move_the_fan ..  ]
+"447
+[e $ ! != -> ( _UART_Data_Ready ..  `i -> 0 `i 180  ]
+"448
+[e = _calibracao ( _read_from_MR (1 _calibracao ]
+[e :U 180 ]
+"450
+[e ( _alarm_check (1 _calibracao ]
+"452
+[e $ ! ! != -> . . _PORTBbits 0 3 `i -> 0 `i 181  ]
+"453
+{
+"454
+[e = . . _PORTCbits 0 5 -> -> 1 `i `uc ]
+"455
+}
+[e $U 182  ]
+[e :U 181 ]
+{
+"456
+[e = . . _PORTCbits 0 5 -> -> 0 `i `uc ]
+"457
+}
+[e :U 182 ]
+"459
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"460
+}
+[e :U 177 ]
+"442
+[e $ == _running -> 1 `i 178  ]
+[e :U 179 ]
+"461
+}
+[e :U 174 ]
+[e $U 175  ]
+[e :U 176 ]
+"462
+[e :UE 164 ]
+}
+[p f _sprintf 8388736 ]
+[a 12C 73 110 115 101 114 105 114 32 80 97 115 115 119 111 114 100 0 ]
+[a 18C 80 97 115 115 119 111 114 100 32 73 110 99 111 114 114 101 116 97 0 ]
+[a 15C 80 97 115 115 119 111 114 100 32 67 111 114 114 101 116 97 0 ]
+[a 8C 83 108 101 101 112 32 77 111 100 101 46 0 ]
+[a 1C 123 39 116 101 109 112 101 114 97 116 117 114 97 39 32 58 32 37 100 32 44 32 39 104 117 109 105 100 97 100 101 39 32 58 32 37 100 32 44 32 39 118 101 108 111 99 105 100 97 100 101 39 32 58 32 37 100 44 32 39 97 108 97 114 109 39 32 58 32 37 100 125 36 0 ]
+[a 10C 87 97 107 105 110 103 32 85 112 33 0 ]
+[a 5C 48 32 48 32 118 101 110 116 111 32 10 0 ]
+[a 3C 49 32 80 101 100 105 100 111 32 100 101 32 105 110 102 111 114 109 97 99 97 111 32 10 0 ]
+[a 6C 48 32 49 32 104 117 109 105 110 100 97 100 101 32 10 0 ]
+[a 7C 48 32 50 32 116 101 109 112 101 114 97 116 117 114 97 32 10 0 ]
+[a 2C 10 0 ]
+[a 4C 10 0 ]
+[a 9C 10 0 ]
+[a 11C 10 0 ]
+[a 13C 10 0 ]
+[a 14C 10 0 ]
+[a 16C 10 0 ]
+[a 17C 10 0 ]
+[a 19C 10 0 ]
